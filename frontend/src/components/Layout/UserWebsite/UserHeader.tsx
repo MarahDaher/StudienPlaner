@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
 import type { FunctionComponent } from "react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 

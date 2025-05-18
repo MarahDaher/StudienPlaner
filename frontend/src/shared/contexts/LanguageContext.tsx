@@ -1,5 +1,5 @@
 import i18n from "@/i18n/i18n";
-import React, {
+import {
   createContext,
   useContext,
   useEffect,

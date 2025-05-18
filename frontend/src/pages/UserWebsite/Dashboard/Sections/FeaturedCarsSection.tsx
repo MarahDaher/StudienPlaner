@@ -1,10 +1,10 @@
-import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CarIcon, FuelIcon, GaugeIcon, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
+import type { FC } from "react";
 
 type FeaturedCarsSectionProps = object;
 
