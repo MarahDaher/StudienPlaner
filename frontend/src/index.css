@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  font-weight: 500;
+  font-size: large;
+
   --background: #ffffff;
   --foreground: #0f1419;
   --card: #f7f8f8;
