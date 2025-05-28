@@ -24,7 +24,7 @@ import { mockStudyPlan } from ".";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export default function StudyPlanDetails() {
-  const [studyPlan, setStudyPlan] = useState(mockStudyPlan);
+  const [studyPlan] = useState(mockStudyPlan);
   const [completedTopics, setCompletedTopics] = useState<number[]>([1, 2, 3]);
 
   const toggleTopicCompletion = (topicId: number) => {
