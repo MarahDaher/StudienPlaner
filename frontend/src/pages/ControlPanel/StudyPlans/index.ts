@@ -1,0 +1,38 @@
+export const mockStudyPlans = [
+  {
+    id: 1,
+    title: "Mathematics Final Exam",
+    examDate: "2024-02-15",
+    createdAt: "2024-01-10",
+    progress: 65,
+    subjects: ["Calculus", "Algebra", "Statistics"],
+    totalHours: 45,
+  },
+  {
+    id: 2,
+    title: "Physics Midterm",
+    examDate: "2024-03-05",
+    createdAt: "2024-01-15",
+    progress: 30,
+    subjects: ["Mechanics", "Thermodynamics", "Electromagnetism"],
+    totalHours: 38,
+  },
+  {
+    id: 3,
+    title: "Chemistry Lab Exam",
+    examDate: "2024-02-28",
+    createdAt: "2024-01-18",
+    progress: 10,
+    subjects: ["Organic Chemistry", "Inorganic Chemistry", "Biochemistry"],
+    totalHours: 32,
+  },
+  {
+    id: 4,
+    title: "Computer Science Project",
+    examDate: "2024-04-10",
+    createdAt: "2024-01-20",
+    progress: 5,
+    subjects: ["Algorithms", "Data Structures", "System Design"],
+    totalHours: 50,
+  },
+];

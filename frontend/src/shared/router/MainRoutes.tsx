@@ -1,16 +1,31 @@
 import MainLayout from "@/components/Layout/ControlPanel/MainLayout";
-import DashboardPage from "@/pages/ControlPanel/Dashboard/DashboardPage";
-import { Home } from "lucide-react";
+import StudyPlanDetails from "@/pages/ControlPanel/StudyPlans/Details/StudyPlanDetails";
+import NewPlanForm from "@/pages/ControlPanel/StudyPlans/Form/NewPlanForm";
+import StudyPlansPage from "@/pages/ControlPanel/StudyPlans/StudyPlansPage";
+import { Library } from "lucide-react";
 
 export const MainRoutes = {
-  path: "/admin",
+  path: "/",
   element: <MainLayout />,
   children: [
     {
       index: true,
-      element: <DashboardPage />,
-      label: "sidebar.dashboard",
-      icon: <Home className="size-4" />,
+      path: "study-plans",
+      element: <StudyPlansPage />,
+      label: "sidebar.studyPlans",
+      icon: <Library className="size-4" />,
+    },
+    {
+      path: "study-plans/:id",
+      element: <StudyPlanDetails />,
+      label: "sidebar.studyPlans",
+      icon: <Library className="size-4" />,
+    },
+    {
+      path: "study-plans/new",
+      element: <NewPlanForm />,
+      label: "sidebar.studyPlans",
+      icon: <Library className="size-4" />,
     },
   ],
 };

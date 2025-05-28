@@ -13,8 +13,7 @@ import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Label } from "@/components/ui/label";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/shared/contexts/LanguageContext";
 
 type LoginFormValues = {
@@ -45,21 +44,12 @@ const LoginPage: FunctionComponent = () => {
   const handleSubmit = async (values: LoginFormValues) => {
     console.log("Submitted values:", values);
     // Handle API call or authentication here
-    navigate("/admin");
+    navigate("/study-plans");
   };
 
   return (
     <>
       <div className="flex flex-col min-h-screen overflow-hidden" dir={dir}>
-        <header className="sticky top-0 z-50 w-full border-b bg-background px-32">
-          <div className="container flex h-16 items-center justify-between">
-            <Link to="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-primary">CarMarket</span>
-            </Link>
-            <LanguageSwitcher />
-          </div>
-        </header>
-
         <div className="flex-1 flex items-center justify-center p-4 bg-gradient-to-br from-[#1e9df1] via-[#1e9df1] to-[#1e9df1]">
           <Card className="w-full max-w-md bg-white/95 backdrop-blur-sm shadow-lg">
             <CardHeader className="space-y-2 text-center">

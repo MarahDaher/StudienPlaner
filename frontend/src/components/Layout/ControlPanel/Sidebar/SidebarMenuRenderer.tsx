@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   SidebarMenu,
   SidebarMenuButton,
@@ -13,21 +13,26 @@ interface SidebarMenuRendererProps {
 
 const SidebarMenuRenderer: React.FC<SidebarMenuRendererProps> = ({ items }) => {
   const navigate = useNavigate();
+  const location = useLocation(); // 🔍 Get current path
 
   return (
     <SidebarMenu>
-      {items.map((item, index) => (
-        <SidebarMenuItem key={index}>
-          <SidebarMenuButton
-            onClick={() => (item.to ? navigate(item.to) : item.action?.())}
-            isActive={item.active}
-            className="cursor-pointer"
-          >
-            <item.icon className="h-4 w-4" />
-            <span>{item.label}</span>
-          </SidebarMenuButton>
-        </SidebarMenuItem>
-      ))}
+      {items.map((item, index) => {
+        const isActive = location.pathname.startsWith(item.to || "");
+
+        return (
+          <SidebarMenuItem key={index}>
+            <SidebarMenuButton
+              onClick={() => (item.to ? navigate(item.to) : item.action?.())}
+              isActive={isActive}
+              className="cursor-pointer"
+            >
+              <item.icon className="h-4 w-4" />
+              <span>{item.label}</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        );
+      })}
     </SidebarMenu>
   );
 };
