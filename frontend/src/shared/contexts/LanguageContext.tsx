@@ -21,7 +21,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(
-    (localStorage.getItem("appLanguage") as Language) || "ar"
+    (localStorage.getItem("appLanguage") as Language) || "en"
   );
 
   // Update language on mount
